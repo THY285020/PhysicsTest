@@ -31,13 +31,15 @@ void PhysicsEngine::HandleCollision()
 			}
 			if (intersectData.isIntersecting)
 			{
+				glm::vec3 dir = glm::normalize(intersectData.IntersectVec);
+
 				if (m_Objects[i]->Ptype == PhysicsType::Dynamic)
 				{
-					m_Objects[i]->SetVelocity(glm::vec3(-1.0) * m_Objects[i]->GetVelocity());
+					m_Objects[i]->SetVelocity(dir * 0.2f);
 				}
-				if (m_Objects[i]->Ptype == PhysicsType::Dynamic)
+				if (m_Objects[j]->Ptype == PhysicsType::Dynamic)
 				{
-					m_Objects[j]->SetVelocity(glm::vec3(-1.0) * m_Objects[j]->GetVelocity());
+					m_Objects[j]->SetVelocity((-1.0f * dir) * 0.2f);
 				}
 			}
 		}

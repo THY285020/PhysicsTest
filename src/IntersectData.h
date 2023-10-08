@@ -4,11 +4,11 @@
 class IntersectData
 {
 public:
-	IntersectData(bool is_Intersecting = false, float distance = 0):
+	IntersectData(bool is_Intersecting = false, glm::vec3 intersectVec = glm::vec3(0.0)):
 		isIntersecting(is_Intersecting),
-		Distance(distance)
+		IntersectVec(intersectVec)
 	{}
 
 	bool isIntersecting;
-	float Distance;
+	glm::vec3 IntersectVec;
 };

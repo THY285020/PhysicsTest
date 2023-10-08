@@ -33,7 +33,7 @@ public:
 
 	virtual IntersectData Intersect(std::shared_ptr<PhysicsObject> other)
 	{
-		return IntersectData(false, 0);
+		return IntersectData();
 	}
 
 	virtual void SetPos(glm::vec3 pos) { m_Position = pos; }

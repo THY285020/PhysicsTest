@@ -10,8 +10,9 @@ IntersectData Plane::Intersect(std::shared_ptr<PhysicsObject> object)
 		float distance = centerLength * glm::dot(m_Normal, center) - m_Offset;
 
 		float  Dis = distance - radius;
-		return IntersectData(Dis < 0, Dis);
+
+		return IntersectData(Dis < 0, Dis * m_Normal);
 	}
 
-	return IntersectData(false, 0);
+	return IntersectData();
 }

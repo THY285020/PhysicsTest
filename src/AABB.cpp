@@ -27,5 +27,5 @@ IntersectData AABB::intersectAABB(const AABB& other)
 	float maxDis = Utils::E_Max(maxDistance);//用于判断是否相交
 	float Dis = maxDistance.length();//距离
 
-	return IntersectData(maxDis < 0.0f, Dis);
+	return IntersectData();
 }

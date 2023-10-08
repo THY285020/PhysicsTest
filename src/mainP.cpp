@@ -125,7 +125,7 @@ int main()
 
 	//---------------------------Physics
 	PhysicsEngine pe;
-	std::shared_ptr<BoundingSphere> bs0 = std::make_shared<BoundingSphere>(glm::vec3(3.0f, 1.0f, -1.0f), 0.8f);
+	std::shared_ptr<BoundingSphere> bs0 = std::make_shared<BoundingSphere>(glm::vec3(3.0f, 1.5f, -1.0f), 0.8f);
 	bs0->SetVelocity(glm::vec3(0.2f, 0.0f, 0.0f));
 	std::shared_ptr<BoundingSphere> bs1 = std::make_shared<BoundingSphere>(glm::vec3(6.0f, 1.0f, -1.0f), 0.5f);
 	bs1->SetVelocity(glm::vec3(-0.2f, 0.0f, 0.0f));
